@@ -34,12 +34,16 @@ function fiveDayForecast() {
 
   // create header and parent div elements for the 5-day forecast and append to parent div
   // I suspect the "undefined" text is coming from somewhere around here
-  var fiveDayHeader = $("<h2>");
-  fiveDayHeader.text("Five Day Forecast:");
-  forecast.append(fiveDayHeader);
-  var forecastDiv = $("<div>");
-  forecastDiv.addClass("d-inline-flex flex-wrap");
-  forecast.append(forecastDiv);
+  // var fiveDayHeader = $("<h2>");
+  // fiveDayHeader.text("Five Day Forecast:");
+  // forecast.append(fiveDayHeader);
+  // var forecastDiv = $("<div>");
+  // forecastDiv.addClass("d-inline-flex flex-wrap");
+  // forecast.append(forecastDiv);
+
+  var fiveDayHeader = `<h2> Five Day Forecast: </h2>
+                          <div class="d-inline-flex flex-wrap>`;
+  forecast.html(fiveDayHeader);
 
   // loops through the 5 day forecast responses and builds cards showing the data from the afternoon for each day
   for (var i = 0; i < response.list.length; i++) {
@@ -51,6 +55,7 @@ function fiveDayForecast() {
       "https://openweathermap.org/img/w/" + dayData.weather[0].icon + ".png";
       // builds cards from only hours in the late afternoon, the warmest point of the day
     if (timeDate.$H === 15 || timeDate.$H === 16 || timeDate.$H === 17 || timeDate.$H === 18) {
+      // adds the following code block to cardHtml for every instance above as the for loop goes through the response from the API
       cardHtml += 
       `<div class="card m-2">
         <ul class="list-unstyled p-3">
@@ -64,7 +69,8 @@ function fiveDayForecast() {
     };
   };
 // fills forecastdiv with the html created in the for loop
-forecastDiv.html(cardHtml);
+fiveDayHeader.html(cardHtml);
+fiveDayHeader += `</div>`;
 });
 };
 
