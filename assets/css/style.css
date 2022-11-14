@@ -22,7 +22,7 @@
 
 /* dictates styling for weather cards, with gradient background */
 .card {
-    width: 9rem;
+    width: 10rem;
     background: rgb(0,50,89);
     background: linear-gradient(180deg, rgba(0,50,89,1) 5%, rgba(18,90,136,1) 46%, rgba(116,142,157,1) 100%);
     color: white;

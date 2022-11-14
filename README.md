@@ -20,6 +20,10 @@ This weather dashboard is designed to allow a user to search for and view weathe
 
 This project uses Bootstrap, jQuery, Openweather and Dayjs APIs for content, code formatting, and display purposes.
 
+## Notes
+
+This weather dashboard project reinforced a lot of the knowledge I've gained about working with APIs so far in addition to teaching me some alternate ways to append large blocks of HTML using to the DOM using the .html() method and template literals. Next steps for this project include troubleshooting the persistent "undefined" that appears before the weather cards.
+
 ## License
 
 Please refer to the license in the repo.
