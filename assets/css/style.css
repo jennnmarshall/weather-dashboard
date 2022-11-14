@@ -13,7 +13,7 @@
     font-weight: bold;
 }
 
-/* dictates styling for clear history element */
+/* dictates styling for clear history anchor element */
 #clear-history {
     color:grey;
     text-decoration: none;
