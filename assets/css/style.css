@@ -1,0 +1,30 @@
+
+/* header with background gradient */
+#header{
+    color:white;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 5%, rgba(9,9,121,1) 56%, rgba(111,231,255,1) 100%);
+}
+
+/* dictates styling for weather dashboard title */
+#header h1 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* dictates styling for clear history element */
+#clear-history {
+    color:grey;
+    text-decoration: none;
+    font-style: italic;
+}
+
+/* dictates styling for weather cards, with gradient background */
+.card {
+    width: 9rem;
+    background: rgb(0,50,89);
+    background: linear-gradient(180deg, rgba(0,50,89,1) 5%, rgba(18,90,136,1) 46%, rgba(116,142,157,1) 100%);
+    color: white;
+    text-align: center;
+}
