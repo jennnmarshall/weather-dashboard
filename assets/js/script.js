@@ -120,7 +120,6 @@ function getCurrentWeather() {
     
     $("#current-weather").html(currentWeatherHTML);       
   });
-  printHistory();
 };
 
 // serach button clears forecast html, sets searched city to current city, calls functions to populate page
