@@ -34,16 +34,12 @@ function fiveDayForecast() {
 
   // create header and parent div elements for the 5-day forecast and append to parent div
   // I suspect the "undefined" text is coming from somewhere around here
-  // var fiveDayHeader = $("<h2>");
-  // fiveDayHeader.text("Five Day Forecast:");
-  // forecast.append(fiveDayHeader);
-  // var forecastDiv = $("<div>");
-  // forecastDiv.addClass("d-inline-flex flex-wrap");
-  // forecast.append(forecastDiv);
-
-  var fiveDayHeader = `<h2> Five Day Forecast: </h2>
-                          <div class="d-inline-flex flex-wrap>`;
-  forecast.html(fiveDayHeader);
+  var fiveDayHeader = $("<h2>");
+  fiveDayHeader.text("Five Day Forecast:");
+  forecast.append(fiveDayHeader);
+  var forecastDiv = $("<div>");
+  forecastDiv.addClass("d-inline-flex flex-wrap");
+  forecast.append(forecastDiv);
 
   // loops through the 5 day forecast responses and builds cards showing the data from the afternoon for each day
   for (var i = 0; i < response.list.length; i++) {
@@ -69,8 +65,7 @@ function fiveDayForecast() {
     };
   };
 // fills forecastdiv with the html created in the for loop
-fiveDayHeader.html(cardHtml);
-fiveDayHeader += `</div>`;
+forecastDiv.html(cardHtml);
 });
 };
 
