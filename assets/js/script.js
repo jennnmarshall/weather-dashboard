@@ -75,6 +75,7 @@ function fiveDayForecast() {
     }
     // fills forecastdiv with the html created in the for loop
     forecastDiv.html(cardHtml);
+    console.log(typeof cardHtml);
   });
 }
 
